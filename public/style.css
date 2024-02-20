@@ -1,0 +1,106 @@
+.element {
+    background-image: url('https://steamuserimages-a.akamaihd.net/ugc/1705159703236276751/6D8C40402EEA524328C8A9EE58BAA31996466715/?imw=512&amp;imh=320&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true');
+    background-size: 100%; /* Здесь размер будет 100% ширины и 100% высоты контейнера */
+}
+body {
+    text-align: center;
+}
+nav{
+    margin: 1%;
+}
+nav ul {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+nav ul li:last-child {
+    margin-right: 0;
+}
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #000000;
+    border: 1px solid #000000;
+    color: #ffffff;
+}
+nav ul li a:hover {
+    background-color: #2d2d2d;
+}
+.container{
+    margin-top: 6%;
+    text-align: center;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+.btn {
+    background-image: url('https://steamuserimages-a.akamaihd.net/ugc/1705159703236276751/6D8C40402EEA524328C8A9EE58BAA31996466715/?imw=512&amp;imh=320&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true');
+    background-size: 100%;
+    width: 5%;
+    height: 7%;
+
+}
+.btn:hover{
+    width: 8%;
+    height: 10%;
+    transition: 0.5s ;
+}
+
+.btn:not(hover){
+    width: 5%;
+    height: 7%;
+    transition: 0.5s;
+}
+
+.searchInput {
+    border:none;
+    background: none;
+    outline:none;
+    padding: 0;
+    color: rgb(54, 44, 44);
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+}
+.description{
+    font-weight: 600;
+}
+.title{
+    font-weight: 900;
+}
+.img{
+    display: block;
+    margin: 0 auto;
+}
+input{
+    flex: 1;
+    height: 50px;
+    border: 0;
+    outline: 0;
+    font-size: 18px;
+    color: #333;
+}
+.search-box{
+    width: 60%;
+    height: 15%;
+    margin: 0 auto;
+}
+.result-box ul{
+    border-top: 1px solid #999;
+    padding: 15px 10px;
+}
+.result-box ul li{
+    list-style: none;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 15px 10px;
+
+}
+.result-box ul li:hover{
+    background-color: #e9f3ff;
+}
