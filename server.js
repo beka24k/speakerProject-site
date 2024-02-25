@@ -10,22 +10,27 @@ app.use(express.json());
 
 app.get("/", async(req,res)=>{
     let nameSpeaker=req.query.speaker;
-    if(nameSpeaker==null){
-        nameSpeaker="Джон Маккейн";
+    // console.log(nameSpeaker);
+    if (!nameSpeaker || nameSpeaker.trim() === "") {
+        nameSpeaker = "Напишите имя оратора правильно или выберите в 'search bar'";
     }
-    console.log(typeof nameSpeaker);
     let data;
     try {
         const model= await Model.find({name:nameSpeaker});
         data = model;
-        console.log(data);
+        // console.log(data);
     } catch (error) {
         //console.error(error);
+        nameSpeaker = "Напишите имя оратора правильно или выберите в 'search bar'";
         data=null;
         error="Error,PLease try again";
     }
     res.render("main.ejs",{data});
 });
+
+app.get('/cls', (req,res)=>{
+    res.render('story.ejs');
+})
 
 app.post("/speaker", async(req,res)=>{
     try {
